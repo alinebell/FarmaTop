@@ -1,5 +1,14 @@
 package com.generation.cobaia.repository;
 
-public interface CategoriaRepository {
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.generation.cobaia.model.CategoriaModel;
+
+@Repository
+public interface CategoriaRepository  extends JpaRepository<CategoriaModel, Long>{
+	public List<CategoriaModel> findAllByMedicamentoContainingIgnoreCase (String medicamento);
 
 }

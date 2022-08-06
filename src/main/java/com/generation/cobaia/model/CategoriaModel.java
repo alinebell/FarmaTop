@@ -1,11 +1,9 @@
 package com.generation.cobaia.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -16,11 +14,10 @@ public class CategoriaModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private Long id;
 	
-	@NotBlank(message = "Categoria é obrigatório!") 
-	private String nomeCategoria;
+	@NotBlank(message = "Medicamento é obrigatório!") 
+	private String medicamento;
 	
 	/*@OneToMany(mappedBy="categoria", cascade = CascadeType.ALL)*/
-	
 
 
 	public Long getId() {
@@ -32,11 +29,11 @@ public class CategoriaModel {
 	}
 
 	public String getCategoria() {
-		return nomeCategoria;
+		return medicamento;
 	}
 
-	public void setCategoria(String categoria) {
-		this.nomeCategoria = categoria;
+	public void setCategoria(String medicamento) {
+		this.medicamento = medicamento;
 	}
 
 }
