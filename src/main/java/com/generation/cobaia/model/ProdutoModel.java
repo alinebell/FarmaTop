@@ -21,7 +21,7 @@ public class ProdutoModel {
 	private Long id;
 
 	@NotBlank(message = "Nome é obrigatório!") 
-	private String nomeProduto;
+	private String nomes;
 	
 	private int quantidade;
 	
@@ -40,12 +40,12 @@ public class ProdutoModel {
 		this.id = id;
 	}
 
-	public String getNomeProduto() {
-		return nomeProduto;
+	public String getNomes() {
+		return nomes;
 	}
 
-	public void setNomeProduto(String nomeProduto) {
-		this.nomeProduto = nomeProduto;
+	public void setNomes(String nomes) {
+		this.nomes = nomes;
 	}
 
 	public int getQuantidade() {
